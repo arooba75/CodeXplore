@@ -1,0 +1,63 @@
+.nav-container{
+    z-index: 1;
+    padding: 0px 0px 0px 0px;
+    border: 1px solid rgb(8, 25, 126);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width:100%;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+   
+    background: linear-gradient(#a6edfa,#96e3f7 );
+    
+}
+
+
+.nav-container img{
+    height: 80px;
+    width: auto;
+    /* border: 2px solid; */
+    overflow: hidden;
+   
+}
+
+ol{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    
+}
+button{
+    cursor: pointer;
+}
+
+#cart{
+    color: rgb(8, 25, 126);
+    border: none;
+    
+   
+}
+
+#login{
+    color: rgb(8, 25, 126) ;
+    border-color:  rgb(8, 25, 126);
+}
+
+#signup{
+    color: #fff;
+    background-color:  rgb(8, 25, 126);
+}
+
+#login:hover{
+    background: rgb(8, 25, 126,0.3);
+    
+}
+
+#signup:hover{
+    background: rgb(8, 25, 126,0.9);
+    
+    
+}

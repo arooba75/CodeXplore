@@ -1,0 +1,29 @@
+#testimonial-section{
+    background: linear-gradient(#f0f2f3,#ffffff);
+    padding-bottom: 100px;
+}
+
+#testimonial-section-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#testimonial-section-title p{
+    display: flex;
+    text-align: center;
+    width: 700px;
+    margin-bottom: 60px;
+}
+
+.t-cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+#signup{
+    color: #fff;
+   
+}

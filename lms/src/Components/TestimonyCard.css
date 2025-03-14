@@ -1,0 +1,71 @@
+.t-card-box{
+    /* background-color: aqua; */
+    border: 2px solid #96e3f7;
+    position: relative;
+    height: 270px;
+    width: 350px;
+    border-radius: 5%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.t-card-top{
+    background-color: #96e3f7;
+    
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+   height: 90px;
+    
+}
+
+.t-card-top-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(8, 25, 126);
+    width: 60%;
+    margin-left: 10%;
+    height: 90px;
+}
+
+.t-card-img img{
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+    margin-left: 20%;
+    position:relative;
+}
+
+.t-card-name{
+    font-family: outfit;
+   position: relative;
+   top:10px
+}
+
+.t-card-description{
+    font-family: outfit;
+    margin: 0%;
+    position: relative;
+    bottom:10px;
+}
+
+.t-card-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items:flex-start;
+}
+
+.t-card-content{
+    margin-left: 5%;
+}
+
+.t-card-bottom a{
+    margin-left: 5%;
+}
+
+.t-card-bottom a:link{
+    color:rgb(8, 25, 126) ;
+}

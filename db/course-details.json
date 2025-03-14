@@ -1,0 +1,24 @@
+{
+    "course-details":[
+        {
+            "id":1,
+            "title":"Introduction to JavaScript",
+            "content":"Learn the Basics of JavaScript .JavaScript is a versatile programming language that powers the web. In this course, you will learn the fundamentals of JavaScript, including syntax, data types, and control structures.",
+            "trainer":"Bushra Pathan",
+            "description":"Something",
+            "image":"/images/javascript.jpg",
+            "price":"3000"
+
+        },
+        {   
+            "id":2,
+            "title":"Cloud Computing Essentials",
+            "content":"Master Cloud Fundamentals Learn the foundations of cloud computing and explore popular cloud platforms like AWS, Azure, and Google Cloud. This course is ideal for IT professionals and developers looking to transition to.",
+            "trainer":"Arooba Sajjan",
+            "description":"Something",
+            "image":"/images/cloud.jpg",
+            "price":"3500"
+
+        }
+    ]
+}

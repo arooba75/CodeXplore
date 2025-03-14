@@ -1,0 +1,20 @@
+.header-container{
+    border: 2px solid #96e3f7;
+    background: linear-gradient(#96e3f7, #c5eaf3);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.inner-header{
+    max-width: 800px;
+    text-align: center;
+}
+
+#title{
+    /* color: rgb(30, 120, 255); */
+    color: rgb(19, 112, 252);
+}
