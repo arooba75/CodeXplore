@@ -1,9 +1,13 @@
 
 import { BrowserRouter as Router, Routes ,Route} from 'react-router-dom'
+import { ClerkProvider, SignIn, SignUp } from "@clerk/clerk-react";
 import Home from './pages/Home'
 import CourseList from './pages/CourseList'
 import CourseDetail from './pages/CourseDetail'
 
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+
+console.log("Clerk Publishable Key:", PUBLISHABLE_KEY);
 
 const coursesData = [
   {
@@ -26,14 +30,20 @@ function App() {
 
   return (
     <>
-      <Router>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/courses' element={<CourseList courses={coursesData} />} />
-          <Route path='/course-detail/:userid' element={<CourseDetail />}/>
-          
-        </Routes>
-      </Router>
+      
+        <Router>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/courses' element={<CourseList courses={coursesData} />} />
+            <Route path='/course-detail/:userid' element={<CourseDetail />}/>
+            <Route path="/sign-in" element={<SignIn />} />
+            <Route path="/sign-up" element={<SignUp />} />
+
+          </Routes>
+        </Router>
+        
+
+      
     </>
   )
 }

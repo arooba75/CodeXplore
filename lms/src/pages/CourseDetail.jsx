@@ -59,6 +59,7 @@ const CourseDetail = () => {
                     <h3>Master Cloud Fundamentals</h3>
                     <p>{description || "No description available."}</p>
                     <ul>
+                       
                         <li>Understand cloud architecture</li>
                         <li>Learn to work with AWS, Azure, and GCP</li>
                         <li>Explore serverless computing and storage solutions</li>

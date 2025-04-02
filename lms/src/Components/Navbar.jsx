@@ -1,21 +1,54 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+import { SignedIn, SignedOut, UserButton, SignInButton, SignUpButton, SignOutButton } from "@clerk/clerk-react";
 import logo from "/images/Logo.svg";
 import './Navbar.css'
+
+
 const Navbar = () => {
   return (
     <>
     <div className='nav-container'>
         <span>
             
-            <img src={logo} loading='lazy' />
+        <Link to="/">
+          <img src={logo} loading="lazy" alt="Logo" />
+        </Link>
             
         </span>
         <ol>
-            <li><button id='cart'><i class="fa-solid fa-cart-shopping"></i></button></li>
-            <li><button id='login'>Plans and Pricing</button></li>
+        {/* If the user is NOT signed in, show Login & Signup buttons */}
+        <SignedOut>
+          <li>
+            <SignInButton mode="modal">
+              <button id="login">Login</button>
+            </SignInButton>
+          </li>
+          <li>
+            <SignUpButton mode="modal">
+              <button id="signup">Sign up</button>
+            </SignUpButton>
+          </li>
+        </SignedOut>
+
+        {/* If the user is signed in, show profile & logout button */}
+        <SignedIn>
+          <li>
+            <UserButton />
+          </li>
+          <li>
+            <SignOutButton>
+              <button id="logout">Logout</button>
+            </SignOutButton>
+          </li>
+        </SignedIn>
+      </ol>
+
+        {/* <ol>
+            
             <li><button id='login'>Login</button></li>
             <li><button id='signup'>Sign up</button></li>
-        </ol>
+        </ol> */}
     </div>
     </>
   )
