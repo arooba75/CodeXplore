@@ -1,24 +1,85 @@
 {
-    "course-details":[
-        {
-            "id":1,
-            "title":"Introduction to JavaScript",
-            "content":"Learn the Basics of JavaScript .JavaScript is a versatile programming language that powers the web. In this course, you will learn the fundamentals of JavaScript, including syntax, data types, and control structures.",
-            "trainer":"Bushra Pathan",
-            "description":"Something",
-            "image":"/images/javascript.jpg",
-            "price":"3000"
-
-        },
-        {   
-            "id":2,
-            "title":"Cloud Computing Essentials",
-            "content":"Master Cloud Fundamentals Learn the foundations of cloud computing and explore popular cloud platforms like AWS, Azure, and Google Cloud. This course is ideal for IT professionals and developers looking to transition to.",
-            "trainer":"Arooba Sajjan",
-            "description":"Something",
-            "image":"/images/cloud.jpg",
-            "price":"3500"
-
-        }
+    "course-details": [
+      {
+        "id": "1",
+        "title": "Introduction to JavaScript",
+        "content": "Learn the Basics of JavaScript. JavaScript is a versatile programming language that powers the web. In this course, you will learn the fundamentals of JavaScript, including syntax, data types, and control structures.",
+        "trainer": "Bushra Pathan",
+        "description": "Something",
+        "image": "/images/javascript.jpg",
+        "price": "3000",
+        "duration":"10 hrs"
+      },
+      {
+        "id": "2",
+        "title": "Cloud Computing Essentials",
+        "content": "Master Cloud Fundamentals. Learn the foundations of cloud computing and explore popular cloud platforms like AWS, Azure, and Google Cloud. This course is ideal for IT professionals and developers looking to transition.",
+        "trainer": "Arooba Sajjan",
+        "description": "Something",
+        "image": "/images/cloud.jpg",
+        "price": "3500",
+        "duration":"20 hrs"
+      },
+      {
+        "id": "3",
+        "title": "Advanced Python Programming",
+        "trainer": "Arooba Sajjan",
+        "image": "/images/python-image.jpg",
+        "price": "5998",
+        "content": "Master advanced Python techniques, including OOP, decorators, generators, and more. Designed for developers with a basic understanding of Python.",
+        "description": "Something",
+        "duration":"15 hrs"
+      },
+      {
+        "id": "4",
+        "title": "Data Science with Python",
+        "trainer": "Bushra Pathan",
+        "image": "/images/data-science.jpg",
+        "price": "2249",
+        "content": "Learn how to analyze and visualize data using Python libraries like Pandas, Matplotlib, and Seaborn. Explore real-world data sets.",
+        "description": "Something",
+        "duration":"25 hrs"
+      },
+      {
+        "id": "5",
+        "title": "Crypto Currency",
+        "trainer": "Arooba Sajjan",
+        "image": "/images/crypto.jpg",
+        "price": "2474",
+        "content": "Understand the basics of cryptocurrency, blockchain technology, and how digital currencies are changing the financial world.",
+        "description": "Something",
+        "duration":"10 hrs"
+      },
+      {
+        "id": "6",
+        "title": "Web Development Bootcamp",
+        "trainer": "Bushra Pathan",
+        "image": "/images/website.jpg",
+        "price": "2499",
+        "content": "A complete bootcamp to learn HTML, CSS, JavaScript, and modern frontend frameworks to build responsive web applications.",
+        "description": "Something",
+        "duration":"40 hrs"
+      },
+      {
+        "id": "7",
+        "title": "Advanced Web Development",
+        "trainer": "Arooba Sajjan",
+        "image": "/images/website2.jpg",
+        "price": "2474",
+        "content": "Deep dive into web architecture, backend integration, REST APIs, and advanced JavaScript libraries for dynamic web apps.",
+        "description": "Something",
+        "duration":"20 hrs"
+      },
+      {
+        "id": "8",
+        "title": "Introduction to Machine Learning",
+        "trainer": "Arooba Sajjan",
+        "image": "/images/machine.jpg",
+        "price": "3999",
+        "content": "An introductory course to ML concepts including supervised and unsupervised learning, model evaluation, and Python-based implementation.",
+        "description": "Something",
+        "duration":"15 hrs"
+      }
     ]
-}
+  }
+  

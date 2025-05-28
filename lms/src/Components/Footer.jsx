@@ -43,7 +43,7 @@ const Footer = () => {
       {/* Copyright */}
       <div className="footer-bottom">
         <p>
-          © 2025 <a href="https://gowthamgportfolio.netlify.app/">Arooba Sajjan & Bushra The Pathan</a>. All Rights Reserved.
+          © 2025 <a href="">Arooba Sajjan & Bushra The Pathan</a>. All Rights Reserved.
         </p>
       </div>
     </footer>

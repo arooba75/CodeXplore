@@ -23,7 +23,12 @@ const CourseList = ({ courses }) => {
               <Card1 image={course.image} title={course.title} trainer={course.trainer} price={course.price} id={course.id}/>
               </div>
             ))}
-            {courses.map((course) => (
+            {/* {courses.map((course) => (
+              <div key={course.id}>
+              <Card1 image={course.image} title={course.title} trainer={course.trainer} price={course.price} id={course.id}/>
+              </div>
+            ))} */}
+            {/* {courses.map((course) => (
               <div key={course.id}>
               <Card1 image={course.image} title={course.title} trainer={course.trainer} price={course.price} id={course.id}/>
               </div>
@@ -32,12 +37,7 @@ const CourseList = ({ courses }) => {
               <div key={course.id}>
               <Card1 image={course.image} title={course.title} trainer={course.trainer} price={course.price} id={course.id}/>
               </div>
-            ))}
-            {courses.map((course) => (
-              <div key={course.id}>
-              <Card1 image={course.image} title={course.title} trainer={course.trainer} price={course.price} id={course.id}/>
-              </div>
-            ))}
+            ))} */}
             </div>
       </div>
 

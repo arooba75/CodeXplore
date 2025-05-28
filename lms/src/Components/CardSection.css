@@ -15,11 +15,15 @@
     justify-content: center;
     align-items: center;
 }
+#card-section-title h2{
+    color: rgb(8, 25, 126) ;
+}
 
 #card-section-title p{
     display: flex;
     text-align: center;
     width: 700px;
+    color: rgb(8, 25, 126) ;
 }
 #cards{
     display: flex;

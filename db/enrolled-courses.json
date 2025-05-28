@@ -1,0 +1,76 @@
+{
+  "enrolled-courses": [
+    {
+      "id": "b861",
+      "title": "Advanced Python Programming",
+      "trainer": "Arooba Sajjan",
+      "image": "/images/python-image.jpg",
+      "price": "5998",
+      "description": "Something",
+      "duration": "10 hrs",
+      "completedLectures": "0",
+      "totalLectures": 10,
+      "status": "Ongoing"
+    },
+    {
+      "id": "ba12",
+      "title": "Cloud Computing Essentials",
+      "trainer": "Arooba Sajjan",
+      "image": "/images/cloud.jpg",
+      "price": "3500",
+      "description": "Something",
+      "duration": "10 hrs",
+      "completedLectures": "0",
+      "totalLectures": 10,
+      "status": "Ongoing"
+    },
+    {
+      "id": "501d",
+      "title": "Data Science with Python",
+      "trainer": "Bushra Pathan",
+      "image": "/images/data-science.jpg",
+      "price": "2249",
+      "description": "Something",
+      "duration": "10 hrs",
+      "completedLectures": "0",
+      "totalLectures": 10,
+      "status": "Ongoing"
+    },
+    {
+      "id": "38cd",
+      "title": "Advanced Web Development",
+      "trainer": "Arooba Sajjan",
+      "image": "/images/website2.jpg",
+      "price": "2474",
+      "description": "Something",
+      "duration": "10 hrs",
+      "completedLectures": "0",
+      "totalLectures": 10,
+      "status": "Ongoing"
+    },
+    {
+      "id": "1ba9",
+      "title": "Web Development Bootcamp",
+      "trainer": "Bushra Pathan",
+      "image": "/images/website.jpg",
+      "price": "2499",
+      "description": "Something",
+      "duration": "10 hrs",
+      "completedLectures": "0",
+      "totalLectures": 10,
+      "status": "Ongoing"
+    },
+    {
+      "id": "0001",
+      "title": "Introduction to Machine Learning",
+      "trainer": "Arooba Sajjan",
+      "image": "/images/machine.jpg",
+      "price": "3999",
+      "description": "Something",
+      "duration": "10 hrs",
+      "completedLectures": "0",
+      "totalLectures": 10,
+      "status": "Ongoing"
+    }
+  ]
+}

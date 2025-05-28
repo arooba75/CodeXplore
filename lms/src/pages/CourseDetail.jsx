@@ -19,6 +19,7 @@ const CourseDetail = () => {
     let[price, setPrice] =useState("")
 
     // read the data
+    
     useEffect(()=>{
         axios.get(`http://localhost:8081/course-details?id=${userid}`)
         .then((res) => {
@@ -38,6 +39,42 @@ const CourseDetail = () => {
         .catch((err) => console.error("Error fetching course:", err));
 
     },[userid])
+
+
+    const enrollCourse = () => {
+        axios.get(`http://localhost:8082/enrolled-courses?title=${title}`)
+          .then((res) => {
+            if (res.data.length > 0) {
+              alert("You have already enrolled in this course.");
+            } else {
+              const newCourse = {
+                title,
+                trainer,
+                image,
+                price,
+                description,
+                duration: "10 hrs",
+                completedLectures: "0",
+                totalLectures: 10,
+                status: "Ongoing"
+              };
+      
+              axios.post('http://localhost:8082/enrolled-courses', newCourse)
+                .then(() => {
+                  alert("Successfully enrolled!");
+                })
+                .catch((err) => {
+                  console.error("Enrollment failed:", err);
+                  alert("Failed to enroll. Try again.");
+                });
+            }
+          })
+          .catch((err) => {
+            console.error("Error checking enrollment:", err);
+          });
+      };
+      
+      
   return (
     <div>
         <Navbar />
@@ -73,7 +110,7 @@ const CourseDetail = () => {
                 <div className="below-cd-img">
                     <h4> 5 Days Left at this price!</h4>
                     <h3>₹ {price || "0"}</h3>
-                    <button id='enroll'>Enroll now </button>
+                    <button id='enroll' onClick={enrollCourse}>Enroll now </button>
                     <h3>What's in the Course</h3>
                     <ul>
                         <li>Lifetime access with free updates.</li>

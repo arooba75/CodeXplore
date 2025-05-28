@@ -1,33 +1,31 @@
 
 import { BrowserRouter as Router, Routes ,Route} from 'react-router-dom'
-import { ClerkProvider, SignIn, SignUp } from "@clerk/clerk-react";
+import { ClerkProvider, SignIn, SignUp, SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 import Home from './pages/Home'
 import CourseList from './pages/CourseList'
 import CourseDetail from './pages/CourseDetail'
+import Dashboard from './pages/Dashboard';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 console.log("Clerk Publishable Key:", PUBLISHABLE_KEY);
 
-const coursesData = [
-  {
-    id: 1,
-    image:"/images/javascript.jpg",
-    title: "Introduction to JavaScript",
-    trainer: "Bushra Pathan",
-    price:"3000"
-  },
-  {
-    id: 2,
-    image:"/images/cloud.jpg",
-    title: "Cloud Computing Essentials",
-    trainer: "Arooba Sajjan",
-    price:"3500"
-  }
-];
+
+
+
 
 function App() {
-
+    let [coursesData, setCoursesData] = useState([]);
+    useEffect(() => {
+          axios.get('http://localhost:8081/course-details')
+          .then((res) => {
+            setCoursesData(res.data);
+          })
+          .catch((err) => console.error("Error fetching courses:", err));
+    }, []);
   return (
     <>
       
@@ -38,6 +36,20 @@ function App() {
             <Route path='/course-detail/:userid' element={<CourseDetail />}/>
             <Route path="/sign-in" element={<SignIn />} />
             <Route path="/sign-up" element={<SignUp />} />
+            <Route
+              path='/dashboard'
+              element={
+                <>
+                  <SignedIn>
+                    <Dashboard />
+                  </SignedIn>
+                  <SignedOut>
+                    <RedirectToSignIn />
+                  </SignedOut>
+                </>
+              }
+            />
+
 
           </Routes>
         </Router>

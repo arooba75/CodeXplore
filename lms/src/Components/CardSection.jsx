@@ -6,28 +6,42 @@ import cyber from '/images/cyber.jpg'
 import javascript from '/images/javascript.jpg'
 import webdev from '/images/web-dev.jpg'
 import { Link } from 'react-router-dom'
-
+import axios from 'axios'
+import { useState,useEffect } from 'react'
 const CardSection = () => {
+  const [courses, setCourses] = useState([])
+
+  useEffect(() => {
+    axios.get("http://localhost:8081/course-details")
+      .then((res) => {
+        const firstFour = res.data.slice(0, 4); // 👈 Get only first 4
+        setCourses(firstFour);
+      })
+      .catch((err) => console.error("Error fetching course data:", err));
+  }, []);
+
   return (
-    <div>
-      <div id='card-section'>
+    <div id='card-section'>
       <div id='card-section-title'>
-          <h2>Learn from the best</h2>
-          <p>Discover our top-rated courses across various categories. From coding and design to 
+        <h2>Learn from the best</h2>
+        <p>Discover our top-rated courses across various categories. From coding and design to 
           business and wellness, our courses are crafted to deliver results.</p>
       </div>
-      <div id='cards' >
-      <Card1 title='Python course for beginners' trainer='Ningraj Anna' price='3500' image={python} />
-      <Card1 title='Cybersecurity basics' trainer='John Doe' price='2500' image={cyber} />
-      <Card1 title='Introducion to JavaScript' trainer='Bhavna Deshpande' price='300' image={javascript} />
-      <Card1 title='Web Development Bootcamp' trainer='Abdul Bari' price='5500' image={webdev} />
+      <div id='cards'>
+        {courses.map(course => (
+          <Card1
+            key={course.id}
+            id={course.id}
+            title={course.title}
+            trainer={course.trainer}
+            price={course.price}
+            image={course.image}
+          />
+        ))}
       </div>
-      <button id='search-cources' style={{margin: '30px'}}>
-        <Link to='/courses'>
-        Show all courses
-        </Link>
-        </button>
-    </div>
+      <button id='login' style={{ margin: '30px' }}>
+        <Link to='/courses'>Show all courses</Link>
+      </button>
     </div>
   )
 }

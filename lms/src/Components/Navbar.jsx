@@ -34,12 +34,19 @@ const Navbar = () => {
         {/* If the user is signed in, show profile & logout button */}
         <SignedIn>
           <li>
-            <UserButton />
+            <Link to="/dashboard">
+              <button id="login">Dashboard</button>
+            </Link>
+            
           </li>
+          
           <li>
             <SignOutButton>
-              <button id="logout">Logout</button>
+              <button id="login">Logout</button>
             </SignOutButton>
+          </li>
+          <li>
+            <UserButton />
           </li>
         </SignedIn>
       </ol>

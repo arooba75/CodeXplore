@@ -4,6 +4,7 @@
     gap: 50px;
     padding-top: 100px;
     font-family: 'outfit';
+    background: linear-gradient(#96e3f7,#96e3f7);
 }
 
 #cd-left{
@@ -28,7 +29,9 @@
     color: oklch(.551 .027 264.364);
 
 }
-
+.cd-title h2 , .cd-description h3, .below-cd-img h3{
+    color: rgb(8, 25, 126);
+}
 
 
 
