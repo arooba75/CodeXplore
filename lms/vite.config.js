@@ -5,6 +5,7 @@ import { copyFileSync } from 'fs';
 
 export default defineConfig({
   plugins: [react(), svgr()],
+
   build: {
     rollupOptions: {
       output: {
@@ -31,3 +32,7 @@ export default defineConfig({
 
 // Ensure `_redirects` file is copied to `dist/`
 copyFileSync('public/_redirects', 'dist/_redirects');
+
+
+
+
